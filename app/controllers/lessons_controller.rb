@@ -9,4 +9,9 @@ class LessonsController < ApplicationController
       @lesson = Lesson.find(params[:id])
     end
 
+    private
+
+    def lesson_params
+    params.require(:lesson).permit(:image, :title, :description, :video_url, :published)
+  end
 end

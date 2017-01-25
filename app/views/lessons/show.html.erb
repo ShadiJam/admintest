@@ -15,7 +15,7 @@
 
 <p>
   <strong>Button for PDF Download Goes Here:</strong>
-
+  <%= link_to "Download", @lesson.image.url(:original, false) %>
 </p>
 
 <%= link_to 'Back', lessons_path %>

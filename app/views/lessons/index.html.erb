@@ -15,7 +15,7 @@
       <td><%= lesson.title %></td>
       <td><%= lesson.description %></td>
       <td><%= link_to 'Show', lesson_path(lesson) %></td>
-      <td>Button to download PDF/File goes here</td>
+      <td><%= link_to "Download", @lesson.image.url(:original, false) %></td>
     </tr>
   <% end %>
 </table>
