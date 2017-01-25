@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20170124174904) do
     t.string   "title"
     t.string   "video_url"
     t.string   "description"
-    t.boolean  "published"
+    t.boolean  "published"    default: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

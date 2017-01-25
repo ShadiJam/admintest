@@ -1,0 +1,21 @@
+
+
+<h1>Lessons</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Video</th>
+    <th>Download</th>
+  </tr>
+
+  <% @lesson.each do |lesson| %>
+    <tr>
+      <td><%= lesson.title %></td>
+      <td><%= lesson.description %></td>
+      <td><%= link_to 'Show', lesson_path(lesson) %></td>
+      <td>Button to download PDF/File goes here</td>
+    </tr>
+  <% end %>
+</table>
