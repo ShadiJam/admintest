@@ -14,8 +14,10 @@
     <tr>
       <td><%= lesson.title %></td>
       <td><%= lesson.description %></td>
+      <td><%= link_to "YouTube Video", lesson.video_url %></td>
+      <td><%= link_to "Download", lesson.image.url(:original, false) %></td>
       <td><%= link_to 'Show', lesson_path(lesson) %></td>
-      <td><%= link_to "Download", @lesson.image.url(:original, false) %></td>
+
     </tr>
   <% end %>
 </table>
