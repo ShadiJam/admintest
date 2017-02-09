@@ -8,10 +8,18 @@
   <%= @lesson.description %>
 </p>
 
-<p>
-  <strong>Youtube Video Link Goes Here:</strong>
+<!-- <p>
+  <div class="yt_video thumbnail">
+                <%= link_to image_tag("https://img.youtube.com/vi/#{video.uid}/mqdefault.jpg", alt: video.title,
+                                      class: 'img-rounded'),
+                            "https://www.youtube.com/watch?v=#{video.uid}", target: '_blank' %>
+                <div class="caption">
+                  <h5><%= video.title %></h5>
+                  <p>Published at <%= video.published_at.strftime('%-d %B %Y %H:%M:%S') %></p>
 
-</p>
+                </div>
+
+</p> -->
 
 <p>
   <strong>Button for PDF Download Goes Here:</strong>

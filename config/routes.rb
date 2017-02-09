@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   resources :lessons
   resources :blogs
 
-  devise_for :admins
+  resources :videos, only: [:show]
+
+
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
