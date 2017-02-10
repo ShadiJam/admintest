@@ -37,6 +37,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'yt', '~> 0.13.7'
 gem 'autoprefixer-rails'
 
+
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
