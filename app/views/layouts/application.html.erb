@@ -18,7 +18,7 @@
      <div class="navbar-fixed">
        <nav>
          <div class="nav-wrapper">
-           <a href="#!" class="brand-logo">Some Logo</a>
+           <a href="/" class="brand-logo">Study Steel</a>
          <ul class="right">
            <% if user_signed_in? %>
              <% if current_user.admin %>
@@ -33,6 +33,7 @@
           <% else %>
             <li><a href="/">Home</a></li>
             <li><%= link_to "Log In", new_user_session_path, method: :get, :class => 'navbar-link'  %></li>
+            <li><a href="/">Contact</a></li>
           <% end %>
          </ul>
        </div>
@@ -42,5 +43,37 @@
 
 
     <%= yield %>
+
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text" id="forget">More Information</h5>
+            <p class="forget">Some more info<br>lots of info</p>
+            <p class="grey-text text-lighten-4"></p>
+
+
+          </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">Resources</h5>
+            <ul>
+              <li><a class="white-text" href="">Some Link</a></li>
+              <li><a class="white-text" href="">Some Link</a></li>
+              <li><a class="white-text" href="">Some Link</a></li>
+            </ul>
+          </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">Contact Info</h5>
+            <ul>
+              <li><a class="white-text" href="">Email</a></li>
+              <li><a class="white-text" href="">Phone</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+        <div class="footer-copyright">
+            <p class="foot">Will Van Horn Productions</p>
+        </div>
+    </footer>
   </body>
 </html>

@@ -5,14 +5,33 @@
  *
  * Made By MaterializeCSS.com
  */
-body {
-  padding-bottom: 5px;
+ /*general styling guidelines*/
+* {
+  box-sizing: border-box;
 }
 
-h1#welcome.header.col.s12.light {
-  float: right;
-  margin-top: 50px;
-  margin-right: 100px;
+div {
+  font-size: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media only screen and (max-width : 1024px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
 }
 
 div.container {
@@ -23,18 +42,53 @@ div.container a {
   color: white;
 }
 
-div.form {
-  margin-left: 100px;
-  margin-right: 100px;
-}
 
+
+/*navigation styling*/
 nav {
-   height: 100px;
-   background-color: #2F7384 !important;
+  height: 100px;
+  background-color: #E2DCD5 !important;
  }
 
 div.nav-wrapper {
-  background-color: #2F7384 !important;
+  background-color: #E2DCD5 !important;
+}
+
+a.brand-logo {
+  width: 120px;
+  height: 120px;
+  padding-left: 30px;
+  padding-top: 20px;
+  position: fixed;
+}
+
+ul.right {
+  padding-right: 30px;
+  padding-top: 15px;
+}
+
+/* youtube video styling */
+
+div.video-container {
+  position: relative;
+  height: 300px;
+  padding-right: 30px;
+  padding-left: 30px;
+  border: 5px solid #E2DCD5;
+}
+
+.video-container iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* payment form styling */
+
+form {
+  height: 600px;
+  padding-left: 100px;
+  padding-top: 100px;
 }
 
 ul#mobile-demo.side-nav li a {
@@ -45,11 +99,7 @@ p.children {
   margin-left: 100px;
 }
 
- a.brand-logo img {
-   width: 120px;
-   height: 120px;
-   margin-left: 160px;
- }
+
 
  p {
    line-height: 2rem;
@@ -72,7 +122,7 @@ p.children {
 
 button.btn.waves-effect.waves-light {
    margin-bottom: 30px;
-   background-color: #FD3E81 !important;
+   background-color: #E2DCD5 !important;
  }
 
 td.link a {
@@ -100,20 +150,12 @@ button.btn.waves-effect.waves-light a {
    margin-right: auto;
  }
 
-img.drunk {
+img.pedal {
    top: 1%;
    left: 50%;
    margin-top: -50%;
  }
 
-img.happy {
-  left: 50%;
-  margin-top: -40%;
-}
-
-img.all {
-   padding-bottom: 70px;
- }
 
 div.section.no-pad-bot {
    color: white;
@@ -140,27 +182,8 @@ h1.header.col.s12.light {
   margin-left: 50px;
 }
 
-div.table {
-  margin-left: 100px;
-  margin-right: 100px;
-  vertical-align: middle;
-}
 
- @media only screen and (max-width : 1024px) {
-   .parallax-container .section {
-     position: absolute;
-     top: 40%;
-   }
-   #index-banner .section {
-     top: 10%;
-   }
- }
 
- @media only screen and (max-width : 600px) {
-   #index-banner .section {
-     top: 0;
-   }
- }
 
 .icon-block {
    padding: 0 15px;
@@ -169,25 +192,32 @@ div.table {
    font-size: inherit;
  }
 
+ /*footer styling*/
+
 footer.page-footer {
    margin: 0;
-   background-color: #2F7384 !important;
+   width: 100%;
+   max-height: 150px;
+   background-color: #E2DCD5 !important;
  }
 
 div.footer-copyright {
-   background-color: #2F7384 !important;
- }
-
-p.center.light a {
-   text-decoration: black;
+   background-color: #E2DCD5 !important;
  }
 
 h5#forget.white-text {
    margin-left: 100px;
  }
 
+ a.white-text {
+   color: white;
+   font-size: 14px;
+ }
+
 p.foot {
-   margin-left: 100px;
+   margin-left: 50px;
+   color: white;
+   font-size: 14px;
  }
 
 p.forget {
