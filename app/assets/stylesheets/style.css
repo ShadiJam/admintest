@@ -30,11 +30,11 @@ div.form {
 
 nav {
    height: 100px;
-   background-color: #1F5673 !important;
+   background-color: #2F7384 !important;
  }
 
 div.nav-wrapper {
-  background-color: #1F5673 !important;
+  background-color: #2F7384 !important;
 }
 
 ul#mobile-demo.side-nav li a {
@@ -171,11 +171,11 @@ div.table {
 
 footer.page-footer {
    margin: 0;
-   background-color: #FD3E81 !important;
+   background-color: #2F7384 !important;
  }
 
 div.footer-copyright {
-   background-color: #FD3E81 !important;
+   background-color: #2F7384 !important;
  }
 
 p.center.light a {
