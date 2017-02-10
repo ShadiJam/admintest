@@ -39,6 +39,8 @@ gem 'autoprefixer-rails'
 
 
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+
+gem 'dotenv-rails', :groups => [:development, :test]
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

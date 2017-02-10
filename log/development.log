@@ -5525,3 +5525,353 @@ Processing by LessonsController#index as HTML
 Completed 200 OK in 65ms (Views: 58.5ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/admin/lesson/4/delete" for 127.0.0.1 at 2017-02-09 22:57:30 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RailsAdmin::MainController#delete as HTML
+  Parameters: {"model_name"=>"lesson", "id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = ? ORDER BY "lessons"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/delete.html.haml within layouts/rails_admin/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."lesson_id" = ?[0m  [["lesson_id", 4]]
+  Rendered /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/_delete_notice.html.haml (37.9ms)
+  Rendered /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/delete.html.haml within layouts/rails_admin/application (53.6ms)
+Started GET "/admin/" for 127.0.0.1 at 2017-02-09 22:57:36 -0600
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" ORDER BY "blogs"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "lessons"[0m
+  [1m[36mLesson Load (0.3ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" ORDER BY "lessons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" ORDER BY "videos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (21.0ms)
+Started GET "/admin" for 127.0.0.1 at 2017-02-09 22:57:40 -0600
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" ORDER BY "blogs"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "lessons"[0m
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" ORDER BY "lessons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" ORDER BY "videos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (14.4ms)
+  Rendered /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.7ms)
+  Rendered /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.4ms)
+  Rendered /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_navigation.html.haml (87.2ms)
+  Rendered /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_navigation.html.haml (17.9ms)
+  Rendered /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (8.1ms)
+  Rendering /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (5.1ms)
+  Rendered /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/pjax.html.haml (19.5ms)
+Completed 200 OK in 13264ms (Views: 12995.1ms | ActiveRecord: 3.5ms)
+
+
+  Rendering /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/pjax.html.haml (4.0ms)
+Completed 200 OK in 4259ms (Views: 4135.5ms | ActiveRecord: 2.2ms)
+
+
+  Rendered /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.7ms)
+  Rendered /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_navigation.html.haml (20.0ms)
+  Rendered /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (4.8ms)
+  Rendering /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/pjax.html.haml (5.4ms)
+Completed 200 OK in 8361ms (Views: 8324.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/charges/new" for 127.0.0.1 at 2017-02-09 22:58:15 -0600
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /Users/shadijam/Code/admintest/app/controllers/application_controller.rb:3)
+Processing by ChargesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 154ms (Views: 143.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/charges" for 127.0.0.1 at 2017-02-09 22:59:35 -0600
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YtpZmuffp57mHDqpUhv3NtTlbUWp94frSCg5/zf28AwjXICv0bMB4ld6gLhylXiMQjrR5jGImnkIu7rrWMmN6g==", "stripeToken"=>"tok_19lWVLDKTNUwPIgqtBZG3szz", "stripeTokenType"=>"card", "stripeEmail"=>"shadijam00@gmail.com"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering charges/create.html.erb within layouts/application
+  Rendered charges/create.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 4567ms (Views: 64.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-09 23:03:20 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /Users/shadijam/Code/admintest/app/controllers/application_controller.rb:3)
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered welcome/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 541ms (Views: 497.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-02-09 23:03:21 -0600
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" ORDER BY "blogs"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "lessons"[0m
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" ORDER BY "lessons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" ORDER BY "videos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (17.8ms)
+  Rendered /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.0ms)
+  Rendered /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_navigation.html.haml (11.7ms)
+  Rendered /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (4.2ms)
+  Rendering /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/pjax.html.haml (3.7ms)
+Completed 200 OK in 444ms (Views: 255.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/charges/new" for 127.0.0.1 at 2017-02-09 23:03:35 -0600
+Processing by ChargesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 60ms (Views: 54.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/charges" for 127.0.0.1 at 2017-02-09 23:03:41 -0600
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UAEJ9QfrTzltPHGC1xIFtaTi/tfonkzXEE3yysRkLdcRh9DAMYfpRdxay5P3nIoPMj1CdHDhUUVQ3nHeq1tQMQ==", "stripeToken"=>"tok_19lWZLDKTNUwPIgqIoLCD1sO", "stripeTokenType"=>"card", "stripeEmail"=>"shadijam00@gmail.com"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering charges/create.html.erb within layouts/application
+  Rendered charges/create.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2917ms (Views: 67.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/charges/new" for 127.0.0.1 at 2017-02-09 23:06:07 -0600
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /Users/shadijam/Code/admintest/app/controllers/application_controller.rb:3)
+Processing by ChargesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (49.0ms)
+Completed 200 OK in 122ms (Views: 101.0ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/charges" for 127.0.0.1 at 2017-02-09 23:06:14 -0600
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xj4JZne6RQ6UfVrFei35rv7xImoaikF72GpLVqAov1wfuNBTQdbjciUb4NRao3YUaC6eyYL1XOmY+chCzxfCug==", "stripeToken"=>"tok_19lWbnDKTNUwPIgqFeJ0HNSV", "stripeTokenType"=>"card", "stripeEmail"=>"shadijam00@gmail.com"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering charges/create.html.erb within layouts/application
+  Rendered charges/create.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 5029ms (Views: 49.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/charges/new" for 127.0.0.1 at 2017-02-09 23:08:43 -0600
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /Users/shadijam/Code/admintest/app/controllers/application_controller.rb:3)
+Processing by ChargesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 69ms (Views: 50.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/charges" for 127.0.0.1 at 2017-02-09 23:08:49 -0600
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7zjg+DX6uo/FIcGrYGbesXBZqVZyBGV8si7dP7XpG9auvjnNA5Yc83RHe7pA6FEL5oYV9ep7eO7yvV4r2tZmMA==", "stripeToken"=>"tok_19lWeJDKTNUwPIgq7ZrUWi15", "stripeTokenType"=>"card", "stripeEmail"=>"shadijam00@gmail.com"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering charges/create.html.erb within layouts/application
+  Rendered charges/create.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 4399ms (Views: 45.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/charges/new" for 127.0.0.1 at 2017-02-09 23:11:46 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /Users/shadijam/Code/admintest/app/controllers/application_controller.rb:3)
+Processing by ChargesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 570ms (Views: 530.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/charges" for 127.0.0.1 at 2017-02-09 23:11:53 -0600
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hgQiS3dgJ8MS5S5mzybkAtWEBrY+F4Ljl9iMV/yKJofHgvt+QQyBv6ODlHfvqGu4Q1u6FaZon3HXSw9Dk7VbYQ==", "stripeToken"=>"tok_19lWhGDKTNUwPIgqOoKmTg2g", "stripeTokenType"=>"card", "stripeEmail"=>"shadijam00@gmail.com"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/thanks
+Completed 302 Found in 2992ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/thanks" for 127.0.0.1 at 2017-02-09 23:11:56 -0600
+Processing by ChargesController#thanks as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering charges/thanks.html.erb within layouts/application
+  Rendered charges/thanks.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 53ms (Views: 47.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/thanks" for 127.0.0.1 at 2017-02-09 23:13:35 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /Users/shadijam/Code/admintest/app/controllers/application_controller.rb:3)
+Processing by ChargesController#thanks as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering charges/thanks.html.erb within layouts/application
+  Rendered charges/thanks.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 591ms (Views: 551.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/charges/new" for 127.0.0.1 at 2017-02-09 23:13:54 -0600
+Processing by ChargesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 57ms (Views: 52.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/charges/new" for 127.0.0.1 at 2017-02-09 23:13:54 -0600
+Processing by ChargesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 55ms (Views: 49.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/charges/new" for 127.0.0.1 at 2017-02-09 23:13:58 -0600
+Processing by ChargesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 51ms (Views: 46.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-09 23:15:07 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /Users/shadijam/Code/admintest/app/controllers/application_controller.rb:3)
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered welcome/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 576ms (Views: 535.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/charges/new" for 127.0.0.1 at 2017-02-09 23:15:12 -0600
+Processing by ChargesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 72ms (Views: 67.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/charges/new" for 127.0.0.1 at 2017-02-09 23:15:13 -0600
+Processing by ChargesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 59ms (Views: 54.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/charges/new?subscription=yes" for 127.0.0.1 at 2017-02-09 23:20:07 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /Users/shadijam/Code/admintest/app/controllers/application_controller.rb:3)
+Processing by ChargesController#new as HTML
+  Parameters: {"subscription"=>"yes"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 592ms (Views: 553.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/charges" for 127.0.0.1 at 2017-02-09 23:20:39 -0600
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vWw1hdRuzoqwU8vXrJ17oyY+DKFF8EO69YLWmVTxZAf86uyw4gJo9gE1ccaME/QZsOGwAt2PXii1EVWNO84Z4Q==", "subscription"=>"{:value=>\"yes\"}", "stripeToken"=>"tok_19lWpkDKTNUwPIgqwH4riOHS", "stripeTokenType"=>"card", "stripeEmail"=>"contact@shadijam.io"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/thanks
+Completed 302 Found in 2089ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/thanks" for 127.0.0.1 at 2017-02-09 23:20:41 -0600
+Processing by ChargesController#thanks as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering charges/thanks.html.erb within layouts/application
+  Rendered charges/thanks.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 55ms (Views: 50.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-09 23:25:07 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /Users/shadijam/Code/admintest/app/controllers/application_controller.rb:3)
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered welcome/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 548ms (Views: 507.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-02-09 23:25:12 -0600
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" ORDER BY "blogs"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "lessons"[0m
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" ORDER BY "lessons"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" ORDER BY "videos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (22.4ms)
+  Rendered /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (3.9ms)
+  Rendered /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_navigation.html.haml (12.2ms)
+  Rendered /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (3.8ms)
+  Rendering /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/shadijam/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/rails_admin-1.1.1/app/views/layouts/rails_admin/pjax.html.haml (4.4ms)
+Completed 200 OK in 429ms (Views: 255.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/lessons" for 127.0.0.1 at 2017-02-09 23:25:34 -0600
+Processing by LessonsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering lessons/index.html.erb within layouts/application
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."published" = ?[0m  [["published", true]]
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."lesson_id" IN (1, 2, 3)[0m
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered layouts/_video_show.html.erb (1.6ms)
+  Rendered layouts/_video_show.html.erb (0.1ms)
+  Rendered layouts/_video_show.html.erb (0.3ms)
+  Rendered lessons/index.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 89ms (Views: 82.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/lessons" for 127.0.0.1 at 2017-02-09 23:25:35 -0600
+Processing by LessonsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering lessons/index.html.erb within layouts/application
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."published" = ?[0m  [["published", true]]
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."lesson_id" IN (1, 2, 3)[0m
+  [1m[36mVideo Load (0.1ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered layouts/_video_show.html.erb (1.6ms)
+  Rendered layouts/_video_show.html.erb (0.3ms)
+  Rendered layouts/_video_show.html.erb (0.3ms)
+  Rendered lessons/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 87ms (Views: 78.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/lessons/1" for 127.0.0.1 at 2017-02-09 23:25:43 -0600
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (16.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."lesson_id" = 1[0m
+  Rendering lessons/show.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered layouts/_video_show.html.erb (1.5ms)
+  Rendered lessons/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 81ms (Views: 55.8ms | ActiveRecord: 17.1ms)
+
+
