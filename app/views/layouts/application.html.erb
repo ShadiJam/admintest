@@ -4,6 +4,8 @@
     <title>Admintest</title>
     <%= csrf_meta_tags %>
 
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://www.google.com/jsapi"></script>
@@ -11,10 +13,32 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
-    <h1>Homepage</h1>
+    <nav>
+     <div class="navbar-fixed">
+       <nav>
+         <div class="nav-wrapper">
+           <a href="#!" class="brand-logo">Some Logo</a>
+         <ul class="right">
+           <% if user_signed_in? %>
+             <% if current_user.admin %>
+              <li><%= link_to 'Admin Dashboard', rails_admin_path %></li>
+             <% end %>
+             <li><%= link_to 'Lessons', controller: 'lessons' %></li>
+             <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+           <% elsif user_signed_in? %>
+             <li><a href="/">Home</a></li>
+             <li><%= link_to 'Your Lessons' %> </li>
+             <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+          <% else %>
+            <li><a href="/">Home</a></li>
+            <li><%= link_to "Log In", new_user_session_path, method: :get, :class => 'navbar-link'  %></li>
+          <% end %>
+         </ul>
+       </div>
+     </nav>
+   </div>
+ </nav>
 
     <%= yield %>
   </body>

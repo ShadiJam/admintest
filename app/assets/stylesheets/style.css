@@ -1,0 +1,196 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+body {
+  padding-bottom: 5px;
+}
+
+h1#welcome.header.col.s12.light {
+  float: right;
+  margin-top: 50px;
+  margin-right: 100px;
+}
+
+div.container {
+  width: 100%;
+}
+
+div.container a {
+  color: white;
+}
+
+div.form {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+nav {
+   height: 100px;
+   background-color: #1F5673 !important;
+ }
+
+div.nav-wrapper {
+  background-color: #1F5673 !important;
+}
+
+ul#mobile-demo.side-nav li a {
+  position: relative;
+}
+
+p.children {
+  margin-left: 100px;
+}
+
+ a.brand-logo img {
+   width: 120px;
+   height: 120px;
+   margin-left: 160px;
+ }
+
+ p {
+   line-height: 2rem;
+ }
+
+ h1.header.col.s12.light {
+   padding-left: 20px;
+ }
+
+ ul.right.hide-on-med-and-down a {
+   vertical-align: middle;
+ }
+
+ a.button-collapse img {
+   max-width: 120px;
+   max-height: 120px;
+   padding-top: 10px;
+   padding-right: 20px;
+ }
+
+button.btn.waves-effect.waves-light {
+   margin-bottom: 30px;
+   background-color: #FD3E81 !important;
+ }
+
+td.link a {
+  color: black;
+}
+
+button.btn.waves-effect.waves-light a {
+  color: white;
+}
+
+.parallax-container {
+   min-height: 380px;
+   line-height: 0;
+   height: auto;
+ }
+
+.parallax-container .section {
+     width: 100%;
+}
+
+ div#index-banner.parallax-container {
+   height: 500px;
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+img.drunk {
+   top: 1%;
+   left: 50%;
+   margin-top: -50%;
+ }
+
+img.happy {
+  left: 50%;
+  margin-top: -40%;
+}
+
+img.all {
+   padding-bottom: 70px;
+ }
+
+div.section.no-pad-bot {
+   color: white;
+ }
+
+ div.parallax img {
+   width: 600px;
+ }
+
+ div.icon-block img {
+   max-width: 120px;
+   max-height: 120px;
+ }
+
+li.rsvp a {
+   color: white;
+ }
+
+div.show {
+   margin-left: 100px;
+ }
+
+h1.header.col.s12.light {
+  margin-left: 50px;
+}
+
+div.table {
+  margin-left: 100px;
+  margin-right: 100px;
+  vertical-align: middle;
+}
+
+ @media only screen and (max-width : 1024px) {
+   .parallax-container .section {
+     position: absolute;
+     top: 40%;
+   }
+   #index-banner .section {
+     top: 10%;
+   }
+ }
+
+ @media only screen and (max-width : 600px) {
+   #index-banner .section {
+     top: 0;
+   }
+ }
+
+.icon-block {
+   padding: 0 15px;
+ }
+.icon-block .material-icons {
+   font-size: inherit;
+ }
+
+footer.page-footer {
+   margin: 0;
+   background-color: #FD3E81 !important;
+ }
+
+div.footer-copyright {
+   background-color: #FD3E81 !important;
+ }
+
+p.center.light a {
+   text-decoration: black;
+ }
+
+h5#forget.white-text {
+   margin-left: 100px;
+ }
+
+p.foot {
+   margin-left: 100px;
+ }
+
+p.forget {
+   margin-left: 100px;
+   color: white;
+ }

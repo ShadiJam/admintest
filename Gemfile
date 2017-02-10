@@ -37,6 +37,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'yt', '~> 0.13.7'
 gem 'autoprefixer-rails'
 
+gem 'materialize-sass'
 
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 

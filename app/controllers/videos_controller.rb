@@ -4,7 +4,7 @@ class VideosController < ApplicationController
   end
 
   def index
-      @video = Video.where(params[:lesson_id])
+      @videos = Video.where(params[:lesson_id])
   end
 
   def new
@@ -21,8 +21,8 @@ class VideosController < ApplicationController
     else
       render :new
     end
+  end
 
-    
 end
 
 private

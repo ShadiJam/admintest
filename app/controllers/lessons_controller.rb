@@ -2,7 +2,7 @@ class LessonsController < ApplicationController
 
     def index
       @video = Video.where(params[:lesson_id]).all
-      @lesson = Lesson.includes(:videos).all.where(published: true)
+      @lessons = Lesson.includes(:videos).all.where(published: true)
 
     end
 
