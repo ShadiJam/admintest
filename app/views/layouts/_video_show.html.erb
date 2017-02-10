@@ -1,5 +1,6 @@
 <% @video.each do |video| %>
 <div>
+   <div id="player-wrapper"></div>
     <div class="yt_video thumbnail">
       <%= link_to image_tag("https://img.youtube.com/vi/#{video.uid}/mqdefault.jpg", alt: video.title),
                               "https://www.youtube.com/watch?v=#{video.uid}", target: '_blank' %>

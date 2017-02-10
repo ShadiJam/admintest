@@ -1,10 +1,10 @@
 class VideosController < ApplicationController
   def show
-    @video = Video.where(:lesson_id => params[:lesson_id])
+    @video = Video.where(params[:lesson_id]).all
   end
 
   def index
-    @videos = Video.order('created_at DESC')
+      @video = Video.where(params[:lesson_id])
   end
 
   def new
@@ -13,13 +13,16 @@ class VideosController < ApplicationController
   end
 
   def create
-    @video = Video.new(video_params)
+    @lesson = Lesson.find(params[:lesson_id])
+    @video = @lesson.Video.new(video_params)
     if @video.save
       flash[:success] = 'Video added!'
       redirect_to root_url
     else
       render :new
     end
+
+    
 end
 
 private
