@@ -3,13 +3,12 @@ class LessonsController < ApplicationController
     def index
       @video = Video.where(params[:lesson_id]).all
       @lessons = Lesson.includes(:videos).all.where(published: true)
-
     end
 
 
     def show
+      @lesson = Lesson.find(params[:id])
       @video = Video.where(params[:lesson_id])
-      @lesson = Lesson.includes(:videos).find(params[:id])
     end
 
     private
