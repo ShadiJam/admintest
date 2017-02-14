@@ -15,10 +15,11 @@ class LessonsController < ApplicationController
     private
 
     def lesson_params
-      params.require(:lesson).permit(:image, :title, :description, :published, :videos)
+      params.require(:lesson).permit(:image, :title, :description, :published, :videos, :mp3)
     end
 
     def video_params
       params.require(:video).permit(:link)
     end
+
 end

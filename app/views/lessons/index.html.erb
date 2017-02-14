@@ -5,7 +5,8 @@
     <th>Title</th>
     <th>Description</th>
     <th>Video</th>
-    <th>Download</th>
+    <th>Download PDF</th>
+    <th>Play Audio</th>
   </tr>
 
   <% @lessons.each do |lesson| %>
@@ -13,7 +14,8 @@
       <td><%= lesson.title %></td>
       <td><%= lesson.description %></td>
       <td><%= render 'layouts/videos' %></td>
-      <td><%= link_to "Download", lesson.image.url(:original, false) %></td>
+      <td><%= lesson.image_file_name %></td>
+      <td><%= lesson.mp3_file_name %></td>
       <td><%= link_to 'Show', lesson_path(lesson) %></td>
     </tr>
   <% end %>

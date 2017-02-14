@@ -13,8 +13,18 @@
 </div>
 
 <p>
-  <strong>Button for PDF Download Goes Here:</strong>
+  <strong>Download PDF:</strong>
   <%= link_to "Download", @lesson.image.url(:original, false) %>
 </p>
+
+<p>
+ <section id="song">
+ </section>
+
+<td><%= link_to "Play Audio File", @lesson.mp3.url, :class => "play_song" %></td>
+
+</p>
+
+
 
 <%= link_to 'Back', lessons_path %>

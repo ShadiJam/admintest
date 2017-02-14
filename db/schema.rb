@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170209201347) do
+ActiveRecord::Schema.define(version: 20170213220535) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "blog_name"
@@ -29,6 +29,10 @@ ActiveRecord::Schema.define(version: 20170209201347) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "mp3_file_name"
+    t.string   "mp3_content_type"
+    t.integer  "mp3_file_size"
+    t.datetime "mp3_updated_at"
   end
 
   create_table "users", force: :cascade do |t|
