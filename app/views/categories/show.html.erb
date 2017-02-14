@@ -1,4 +1,4 @@
-<h1>Lessons</h1>
+<h1><%= @category.category_name %> Lessons</h1>
 
 <table>
   <tr>
@@ -16,7 +16,7 @@
       <td><%= render 'layouts/videos' %></td>
       <td><%= lesson.image_file_name %></td>
       <td><%= lesson.mp3_file_name %></td>
-      <td><%= link_to 'Show', lesson_path(lesson) %></td>
+      <td><%= link_to 'Show', category_lesson_path(lesson.category) %></td>
     </tr>
   <% end %>
 </table>

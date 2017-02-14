@@ -10,13 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170213220535) do
+ActiveRecord::Schema.define(version: 20170214040757) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "blog_name"
     t.text     "blog_content"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "category_name"
+    t.integer  "lesson_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["lesson_id"], name: "index_categories_on_lesson_id"
   end
 
   create_table "lessons", force: :cascade do |t|
@@ -33,6 +41,8 @@ ActiveRecord::Schema.define(version: 20170213220535) do
     t.string   "mp3_content_type"
     t.integer  "mp3_file_size"
     t.datetime "mp3_updated_at"
+    t.integer  "category_id"
+    t.index ["category_id"], name: "index_lessons_on_category_id"
   end
 
   create_table "users", force: :cascade do |t|

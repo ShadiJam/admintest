@@ -1,27 +1,14 @@
 class VideosController < ApplicationController
   def show
-    @video = Video.where(params[:lesson_id]).all
+    @category = Category.find(params[:id])
+    @lesson = @category.lessons.where(params[:category_id])
+    @video = @lesson.videos.where(video_params)
   end
 
   def index
       @videos = Video.all
   end
 
-  def new
-    @lesson = Lesson.find(params[:lesson_id])
-    @video = @lesson.Video.new
-  end
-
-  def create
-    @lesson = Lesson.find(params[:lesson_id])
-    @video = @lesson.Video.new(video_params)
-    if @video.save
-      flash[:success] = 'Video added!'
-      redirect_to root_url
-    else
-      render :new
-    end
-  end
 
 end
 

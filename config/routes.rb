@@ -4,10 +4,13 @@ Rails.application.routes.draw do
 
   get 'thanks', to: 'charges#thanks', as: 'thanks'
 
-  resources :lessons
-  resources :blogs
+  resources :categories do
+    resources :lessons do
+      resources :videos, only: [:show]
+    end
+  end
 
-  resources :videos, only: [:show]
+  resources :blogs
 
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'

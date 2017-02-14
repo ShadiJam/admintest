@@ -10,7 +10,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://www.google.com/jsapi"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
-  
+
 
 
   </head>
@@ -27,7 +27,7 @@
              <% if current_user.admin %>
               <li><%= link_to 'Admin Dashboard', rails_admin_path %></li>
              <% end %>
-             <li><%= link_to 'Lessons', controller: 'lessons' %></li>
+             <li><%= link_to 'Categories', controller: 'categories' %></li>
              <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
            <% elsif user_signed_in? %>
              <li><a href="/">Home</a></li>
