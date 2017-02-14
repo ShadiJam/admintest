@@ -4,9 +4,11 @@ Rails.application.routes.draw do
 
   get 'thanks', to: 'charges#thanks', as: 'thanks'
 
-  resources :categories do
-    resources :lessons do
-      resources :videos, only: [:show]
+  shallow do
+    resources :categories do
+      resources :lessons do
+        resources :videos, only: [:show]
+      end
     end
   end
 

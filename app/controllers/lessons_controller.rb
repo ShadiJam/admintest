@@ -2,21 +2,20 @@ class LessonsController < ApplicationController
   before_action :set_lesson
 
   def index
-    @category = Category.find(params[:category_id])
-    @lessons = @category.lessons.all(lesson_params)
+    @lessons = @lessons.all
     @video = @lessons.videos.all(video_params)
   end
 
   def show
     @category = Category.find(params[:id])
-    @lesson = Lesson.find(params[:id])
+    @lesson = @category.lesson.where(params[:id])
     @video = Video.where(params[:lesson_id])
   end
 
     private
 
     def set_lesson
-      @lesson = Lesson.find(params[:id])
+      @lesson = @lesson.find(params[:id])
     end
 
     def lesson_params
