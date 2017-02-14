@@ -21267,3 +21267,83 @@ Processing by LessonsController#show as HTML
 Completed 200 OK in 69ms (Views: 63.3ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/lessons" for 127.0.0.1 at 2017-02-13 20:10:11 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /Users/shadijam/Code/admintest/app/controllers/application_controller.rb:3)
+Processing by LessonsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering lessons/index.html.erb within layouts/application
+  [1m[36mLesson Load (0.3ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."published" = ?[0m  [["published", true]]
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."lesson_id" IN (1, 2, 3)[0m
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered layouts/_videos.html.erb (7.7ms)
+  Rendered layouts/_videos.html.erb (0.3ms)
+  Rendered layouts/_videos.html.erb (0.1ms)
+  Rendered lessons/index.html.erb within layouts/application (68.7ms)
+Completed 200 OK in 697ms (Views: 636.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/lessons/3" for 127.0.0.1 at 2017-02-13 20:10:16 -0600
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLesson Load (0.6ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering lessons/show.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered layouts/_videos.html.erb (1.6ms)
+  Rendered lessons/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 99ms (Views: 56.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/lessons/3" for 127.0.0.1 at 2017-02-13 20:10:40 -0600
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering lessons/show.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered layouts/_videos.html.erb (1.9ms)
+  Rendered lessons/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 68ms (Views: 63.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/lessons" for 127.0.0.1 at 2017-02-13 20:10:42 -0600
+Processing by LessonsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering lessons/index.html.erb within layouts/application
+  [1m[36mLesson Load (0.3ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."published" = ?[0m  [["published", true]]
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."lesson_id" IN (1, 2, 3)[0m
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered layouts/_videos.html.erb (2.7ms)
+  Rendered layouts/_videos.html.erb (0.3ms)
+  Rendered layouts/_videos.html.erb (0.3ms)
+  Rendered lessons/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 89ms (Views: 82.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/lessons" for 127.0.0.1 at 2017-02-13 20:10:44 -0600
+Processing by LessonsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering lessons/index.html.erb within layouts/application
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."published" = ?[0m  [["published", true]]
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."lesson_id" IN (1, 2, 3)[0m
+  [1m[36mVideo Load (0.1ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered layouts/_videos.html.erb (1.5ms)
+  Rendered layouts/_videos.html.erb (0.3ms)
+  Rendered layouts/_videos.html.erb (0.1ms)
+  Rendered lessons/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 73ms (Views: 66.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/lessons/3" for 127.0.0.1 at 2017-02-13 20:10:45 -0600
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering lessons/show.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  Rendered layouts/_videos.html.erb (2.8ms)
+  Rendered lessons/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 78ms (Views: 73.1ms | ActiveRecord: 0.6ms)
+
+
