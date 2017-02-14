@@ -1,7 +1,12 @@
 RailsAdmin.config do |config|
 
   ### Popular gems integration
-
+  config.model 'Category' do
+    edit do
+      field :category_name
+      field :lessons
+    end
+  end
 ##   == Devise ==
    config.authenticate_with do
      warden.authenticate! scope: :user
