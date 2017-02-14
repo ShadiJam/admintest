@@ -1,9 +1,7 @@
 class Lesson < ApplicationRecord
   belongs_to :category, :inverse_of => :lessons
-  accepts_nested_attributes_for :category, :allow_destroy => false
 
   has_many :videos
-  validates :videos, :presence => true
 
   has_attached_file :image, styles: {thumb: "100x100#"}
   validates_attachment :image,
