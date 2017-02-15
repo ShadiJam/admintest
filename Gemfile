@@ -39,7 +39,9 @@ gem 'autoprefixer-rails'
 
 gem 'materialize-sass'
 
-gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'stripe'
+
+gem 'gibbon'
 
 gem 'dotenv-rails', :groups => [:development, :test]
 # Use Capistrano for deployment
