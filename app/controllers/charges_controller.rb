@@ -40,6 +40,6 @@ class ChargesController < ApplicationController
     end
 
     def amount_to_be_charged
-      @amount = 500
+      @amount = 2000
     end
 end

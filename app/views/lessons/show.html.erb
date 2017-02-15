@@ -1,3 +1,4 @@
+<% if user_signed_in? %>
 <p>
   <strong>Title:</strong>
   <%= @lesson.title %>
@@ -8,26 +9,30 @@
   <%= @lesson.description %>
 </p>
 
-<div>
-  <%= render 'layouts/videos' %>
-</div>
+<% if @video.present? %>
+  <div>
+    <%= render 'layouts/videos' %>
+  </div>
+<% end %>
 
-<p>
-  <strong>Download PDF:</strong>
-  <%= link_to "Download", @lesson.image.url(:original, false) %>
-</p>
+<% if @lesson.image.present? %>
+  <p>
+    <strong>Download PDF:</strong>
+    <%= link_to "Download", @lesson.image.url(:original, false) %>
+  </p>
+<% end %>
 
-<button onclick="playAud()" type="button">Play</button>
-<button onclick="pauseAud()" type="button">Pause</button>
+<% if @lesson.mp3.present? %>
+  <button onclick="playAud()" type="button">Play</button>
+  <button onclick="pauseAud()" type="button">Pause</button>
 
 <audio id = "audio">
     <source src='<%= @lesson.mp3 %>' type="audio/mpeg">
 </audio>
+<% end %>
 <br>
 
-
-
-<!-- <%= link_to 'Back', lesson_path(@lesson) %> -->
+<%= link_to 'Back', lesson_path(@lesson) %>
 
 <script>
 var audio = document.getElementById("audio");
@@ -38,3 +43,7 @@ var audio = document.getElementById("audio");
         audio.pause();
     }
 </script>
+
+  <% else %>
+  <% redirect_to lessons_path %>
+<% end %>
