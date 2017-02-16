@@ -63,16 +63,4 @@ ActiveRecord::Schema.define(version: 20170214040757) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "videos", force: :cascade do |t|
-    t.string   "link"
-    t.string   "title"
-    t.datetime "published_at"
-    t.string   "uid"
-    t.integer  "lesson_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.index ["lesson_id"], name: "index_videos_on_lesson_id"
-    t.index ["uid"], name: "index_videos_on_uid"
-  end
-
 end

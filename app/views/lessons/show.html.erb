@@ -9,12 +9,6 @@
   <%= @lesson.description %>
 </p>
 
-  <% if @video.present? %>
-    <div>
-      <%= render 'layouts/videos' %>
-    </div>
-  <% end %>
-
 
 <% if @lesson.image.present? %>
   <p>

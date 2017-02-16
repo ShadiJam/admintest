@@ -6,9 +6,7 @@ Rails.application.routes.draw do
 
   shallow do
     resources :categories, only: [:index, :show] do
-      resources :lessons, only: [:index, :show] do
-        resources :videos, only: [:show]
-      end
+      resources :lessons, only: [:index, :show] 
     end
   end
 

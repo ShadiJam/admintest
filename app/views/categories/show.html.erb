@@ -4,7 +4,6 @@
   <tr>
     <th>Title</th>
     <th>Description</th>
-    <th>Video</th>
     <th>Download PDF</th>
     <th>Play Audio</th>
   </tr>
@@ -13,7 +12,6 @@
     <tr>
       <td><%= lesson.title %></td>
       <td><%= lesson.description %></td>
-      <td><%= render 'layouts/videos' %></td>
       <td><%= lesson.image_file_name %></td>
       <td><%= lesson.mp3_file_name %></td>
       <td><%= link_to 'Show', lesson_path(@lesson) %></td>

@@ -16,7 +16,7 @@ before_action :authenticate_user!
   end
 
   def lesson_params
-    params.require(:lesson).permit(:image, :title, :description, :published, :videos)
+    params.require(:lesson).permit(:image, :title, :description, :published)
   end
 
 end
