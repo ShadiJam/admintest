@@ -5,10 +5,10 @@
     <th>Category</th>
   </tr>
 
-  <% @category.each do |category| %>
+  <% @categories.each do |category| %>
     <tr>
       <td><%= category.category_name %></td>
-      <td><%= link_to 'Show', category_lessons_path(@category) %></td>
+      <td><%= link_to 'Show', category_path(category) %></td>
     </tr>
   <% end %>
 </table>

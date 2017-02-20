@@ -1,5 +1,5 @@
 class Lesson < ApplicationRecord
-  belongs_to :category, :inverse_of => :lessons
+  belongs_to :category
 
   has_attached_file :image, styles: {thumb: "100x100#"}
   validates_attachment :image,

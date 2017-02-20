@@ -1,3 +1,7 @@
 class Category < ApplicationRecord
-  has_many :lessons, :inverse_of => :category
+  has_many :lessons
+
+  def name
+    "#{category_name}"
+  end
 end

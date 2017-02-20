@@ -1,12 +1,12 @@
 class CategoriesController < ApplicationController
 
   def index
-    @category = Category.all
+    @categories = Category.all
   end
 
   def show
     @category = Category.find(params[:id])
-    @lesson = Lesson.where(params[:category_id])
+    @lessons = @category.lessons
   end
 
 

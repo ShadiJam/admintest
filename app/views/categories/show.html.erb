@@ -8,13 +8,13 @@
     <th>Play Audio</th>
   </tr>
 
-  <% @category.lessons.each do |lesson| %>
+  <% @lessons.each do |lesson| %>
     <tr>
       <td><%= lesson.title %></td>
       <td><%= lesson.description %></td>
       <td><%= lesson.image_file_name %></td>
       <td><%= lesson.mp3_file_name %></td>
-      <td><%= link_to 'Show', lesson_path(@lesson) %></td>
+      <td><%= link_to 'Show', lesson_path(lesson) %></td>
     </tr>
   <% end %>
 </table>
