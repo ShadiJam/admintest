@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :categories
   resources :lessons
-
+  resources :videos
   resources :blogs
 
   devise_for :users

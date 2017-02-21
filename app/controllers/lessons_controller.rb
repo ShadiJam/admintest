@@ -18,7 +18,7 @@ class LessonsController < ApplicationController
     private
 
     def lesson_params
-      params.require(:category).permit(lesson: [:image, :title, :description, :published, :mp3, :category_id])
+      params.require(:category).permit(lesson: [:image, :title, :description, :published, :mp3, :video_id, :category_id])
     end
 
     def category_params

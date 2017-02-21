@@ -1,5 +1,6 @@
 class Lesson < ApplicationRecord
   belongs_to :category
+  has_many :video
 
   has_attached_file :image, styles: {thumb: "100x100#"}
   validates_attachment :image,
