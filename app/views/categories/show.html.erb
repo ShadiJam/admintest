@@ -4,18 +4,24 @@
   <tr>
     <th>Title</th>
     <th>Description</th>
-    <th>Download PDF</th>
-    <th>Play Audio</th>
   </tr>
 
   <% @lessons.each do |lesson| %>
     <tr>
       <td><%= lesson.title %></td>
       <td><%= lesson.description %></td>
-      <td><%= lesson.image_file_name %></td>
-      <td><%= lesson.mp3_file_name %></td>
-      <td><%= link_to 'Show', lesson_path(lesson) %></td>
+      <% if user_signed_in? %>
+        <td><%= link_to 'Show', lesson_path(lesson) %></td>
+      <% else %>
+        <td><%= link_to 'Buy Now', new_charge_path %></td>
+      <% end %>
     </tr>
   <% end %>
 </table>
+
+
+<p>Price: $20/month for 4 lessons per month!</p>
+<p> You'll be required to create an account before you can make a purchase. Click 'Buy Now' and create an account to purchase.</p>
+
+<br>
 <%= link_to 'Back', categories_path %>
