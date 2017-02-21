@@ -12,7 +12,7 @@
 <% if @lesson.video.present? %>
   <% @lesson.video.each do |video| %>
     <div class="video-container">
-      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/#{@video.uid}" frameborder="0" allowfullscreen=""></iframe>
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/#{@lesson.video.uid}" frameborder="0" allowfullscreen=""></iframe><%= video.link %>
     </div>
   <% end %>
 <% end %>
@@ -28,7 +28,7 @@
 <% if @lesson.mp3.present? %>
   <button onclick="playAud()" type="button">Play</button>
   <button onclick="pauseAud()" type="button">Pause</button>
-
+  <%= link_to "Download", @lesson.mp3(:original, false) %>
 <audio id = "audio">
     <source src='<%= @lesson.mp3 %>' type="audio/mpeg">
 </audio>

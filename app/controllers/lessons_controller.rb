@@ -9,10 +9,12 @@ class LessonsController < ApplicationController
   def index
     @category = Category.find(params[:id])
     @lessons = @category.lessons
+  
   end
 
   def show
     @lesson = Lesson.find(params[:id])
+    @video = @lesson.video
   end
 
     private
@@ -23,6 +25,10 @@ class LessonsController < ApplicationController
 
     def category_params
       params.require(:category).permit(:category_name, :lesson)
+    end
+
+    def video_params
+      params.require(:video).permit(:link)
     end
 
 end

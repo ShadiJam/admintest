@@ -14,4 +14,8 @@ class VideosController < ApplicationController
   def video_params
     params.require(:video).permit(:link)
   end
+
+  def lesson_params
+    params.require(:lesson).permit(:image, :title, :description, :published, :mp3, :video_id, :category_id)
+  end
 end
