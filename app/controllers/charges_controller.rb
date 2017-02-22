@@ -1,5 +1,5 @@
 class ChargesController < ApplicationController
-
+  skip_before_filter :show_navbar, only: [:new]
   before_action :amount_to_be_charged
   before_action :authenticate_user!
   before_action :set_plan
@@ -11,18 +11,18 @@ class ChargesController < ApplicationController
   end
 
   def create
-  customer = StripeTool.create_customer(email: params[:stripeEmail],
-                                        stripe_token: params[:stripeToken])
+    customer = StripeTool.create_customer(email: params[:stripeEmail],
+                                          stripe_token: params[:stripeToken])
 
-  charge = StripeTool.create_charge(customer_id: customer.id,
-                                    amount: @amount,
-                                    description: @description)
+    charge = StripeTool.create_charge(customer_id: customer.id,
+                                      amount: @amount,
+                                      description: @description)
 
-  redirect_to thanks_path
-rescue Stripe::CardError => e
-  flash[:error] = e.message
-  redirect_to new_charge_path
-end
+    redirect_to thanks_path
+  rescue Stripe::CardError => e
+    flash[:error] = e.message
+    redirect_to new_charge_path
+  end
 
 
   private

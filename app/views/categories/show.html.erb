@@ -13,7 +13,7 @@
       <% if user_signed_in? %>
         <td><%= link_to 'Show', lesson_path(lesson) %></td>
       <% else %>
-        <td><%= link_to 'Buy Now', new_charge_path %></td>
+        <td><%= link_to 'Buy Now', new_user_registration_path %></td>
       <% end %>
     </tr>
   <% end %>

@@ -1,20 +1,15 @@
 class LessonsController < ApplicationController
   before_action :authenticate_user!, :except => [:index]
 
-
-  # def save_my_previous_url
-  #   @back_url = session[:my_previous_url]
-  # end
-
   def index
     @category = Category.find(params[:id])
     @lessons = @category.lessons
-  
+
   end
 
   def show
     @lesson = Lesson.find(params[:id])
-    @video = @lesson.video
+    @videos = @lesson.video.all
   end
 
     private
